@@ -1,7 +1,40 @@
+<!Write HTML code to create a portfolio page with an image of the person, short bio and a resume link next to the name of the person. Keep the space below for random images that can be added like posts later as well. Also integrate an interative world map that shows the countries the person has visited.>
+```html
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .bio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .map {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello I'm Jaival</h1>
-<p>Hosted with GitHub Pages</p>
+    <div class="container">
+        <h1>Jaival Bhavsar</h1>
+        <div class="bio">
+            <img src="res/1.jpg" alt="Jaival Bhavsar" style="width:200px">
+            <p>For in dreams, we enter a world  that is entirely our own</p>
+            <a href="https://www.linkedin.com/in/jaivalb/">Linkedin</a>
+        </div>
+        <div class="map">
+            <h2>Visited Countries</h2>
+            <img src="res/mapimage.jpg" alt="Visited Countries" style="width:500px">
+        </div>
+    </div>
 </body>
 </html>
+```
