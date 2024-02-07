@@ -147,13 +147,13 @@
         <p>Discord: brucevane</p>
     </div>
 
-
+    <!--
     <button class="collapsible" onclick="toggleMap()"><b>Travel Map? Tap here</b></button>
         <div class="content" id="mapContent">
             <img src="res/mapimage.jpg" alt="Travel Map" style="width:500px">
         </div>
     </div>
-
+-->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -177,7 +177,6 @@
                 element.style.display = "block";
                 element.style.maxHeight = element.scrollHeight + "px";
     
-                // Smooth scroll to the collapsed content
                 var yOffset = element.getBoundingClientRect().top + window.pageYOffset;
                 window.scrollTo({ top: yOffset, behavior: 'smooth' });
             }
