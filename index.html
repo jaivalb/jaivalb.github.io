@@ -2,11 +2,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio</title>
+    <title>Jaival Bhavsar</title>
+    <link rel="icon" type="image/png" href="res/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            background: linear-gradient(to bottom, #2b2b2b, #181818);
+            color: white;
+        }
+        .collapsible {
+            background-color: inherit;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            text-align: left;
+            width: 180px;
+            border: none;
+            font-family: 'Quicksand', sans-serif;
+            outline: none;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .collapsible::after {
+            content: '\25BC';
+            font-size: 1em;
+            position: absolute;
+            right: 10px;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: inherit;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
         .container {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
         }
         .bio {
@@ -18,17 +59,98 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        header {
+            text-align: center;
+        }
+        header h1 {
+            display: inline-block; 
+            font-family: 'Dancing Script', cursive;
+        }
+        header img {
+            width: 25px;
+            height: 25px;
+            margin-right: 1px;
+        }
+        .logo-container {
+            position: fixed;
+            left: 8px; 
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000; 
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .logos-container {
+            display: block;
+            padding: 12px;
+            border-radius: 1px; 
+        }
+        .logos-container:hover {
+            transform: scale(1.2);
+        }
+
+        .logo-container img {
+            width: 30px; 
+            height: 30px; 
+            vertical-align: middle;
         }
     </style>
 </head>
+
+
 <body>
+
     <div class="container">
+        <header>
         <h1><b>Jaival Bhavsar</b></h1>
+        <div class="logo-container">
+            <div class="logo-container">
+            <a class="logos-container" href="https://www.linkedin.com/in/jaivalb/" target="_blank">
+            <img src="res/linkedin.png" alt="LinkedIn">
+        </a> 
+        <a class="logos-container" href="https://www.twitter.com/jaivalb">
+            <img src="res/twitter.png" alt="Twitter">
+        </a>
+        <a class="logos-container" href="mailto:jaivalb@hotmail.com">
+            <img src="res/mail.png" alt="Email">
+        </a>
+        </div></div>
+        </header>
+
+
         <div class="bio">
             <img src="res/1.jpg" alt="Jaival Bhavsar" style="width:500px">
-            <p><i>For in dreams, we enter a world  that is entirely our own</i></p>
-            <a href="https://www.linkedin.com/in/jaivalb/">Linkedin</a>
+            <p><i>For in dreams, we enter a world  that is entirely our own</i></p> 
         </div>
+
+
+        <button class="collapsible" onclick="toggleContent()"><b>Bio? Tap here</b></button>
+    <div class="content" id="bioContent">
+        <p>Hey there! 👋 :) I hope you are doing well rn</p>
+        <p>Who am I? A 21 year old Masters student from Gujarat,India</p>
+        <p>What do I like? Watching Anime🥷🏻, Driving like Ryan Gosling🏎️, Reading Manga📔, the Gym💪🏼, Classical Music and Jpop🎵, and ofc Tech💻 </p>
+        <p>But why did I make a website? Because it's cool ig</p>
+        <p>You have more questions? Hmu😎 </p>
+        <p>Btw remember to Stay Hydrated🌊</p>
+        <p>Discord: brucevane</p>
+    </div>
+
+    <script>
+        function toggleContent() {
+            var content = document.getElementById("bioContent");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                content.style.maxHeight = null;
+            } else {
+                content.style.display = "block";
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+        
         <div class="map">
             <h2>Travel Map✈️</h2>
             <img src="res/mapimage.jpg" alt="Travel Map" style="width:500px">
