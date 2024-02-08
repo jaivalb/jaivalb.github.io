@@ -118,7 +118,25 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        
+        @media only screen and (max-width: 600px) {
+            .logo-container {
+                position: static;
+                transform: none;
+                text-align: center;
+                padding-bottom: 5px;
+            }
+
+            .logos-container {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .logo-container img {
+                width: 25px;
+                height: 25px;
+                margin-right: 0;
+            }
+        }
     </style>
     
 </head>
@@ -153,7 +171,7 @@
         <button class="collapsible" onclick="toggleContent()"><b>Bio? Tap here</b></button>
     <div class="content" id="bioContent">
         <p>Hey there! 👋 :) I hope you are doing well rn</p>
-        <p>Who am I? A 21 year old Masters student from Gujarat,India</p>
+        <p>Who am I? A 21 year old Masters student from Gujarat, India 🇮🇳</p>
         <p>What do I like? Watching Anime🥷🏻, Driving like Ryan Gosling🏎️, Reading Manga📔, the Gym💪🏼, Classical Music and Jpop🎵, and ofc Tech💻 </p>
         <p>But why did I make a website? Because it's cool ig</p>
         <p>You have more questions? Hmu😎 </p>
